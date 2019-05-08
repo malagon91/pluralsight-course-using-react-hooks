@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 
-const InputElement = () => {
-
+const InputElement = () => { /*useState*/
+    //each usestate returns 2 params, the name of the value on state (inputText) and the second is the function to update the state value
+    // In the () you need to set the initial state for the state declared in this case is a empty string and a empty array list
     const [inputText,setInputText] = useState("");
     const [historyList, setHistoryList] = useState([]);
 
