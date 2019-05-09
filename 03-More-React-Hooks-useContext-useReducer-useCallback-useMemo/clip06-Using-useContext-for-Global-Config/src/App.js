@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Home";
 import Speakers from "./Speakers";
 
+//This is the object to create context in all app
 export const ConfigContext = React.createContext();
 
 const pageToShow = pageName => {
@@ -16,7 +17,7 @@ const configValue = {
 };
 
 const App = ({ pageName }) => {
-  return (
+  return ({/*Here the configContex wrap the entire app and set the values that the context is going to share with childs*/}
       <ConfigContext.Provider value={configValue} >
         <div>{pageToShow(pageName)}</div>
       </ConfigContext.Provider>

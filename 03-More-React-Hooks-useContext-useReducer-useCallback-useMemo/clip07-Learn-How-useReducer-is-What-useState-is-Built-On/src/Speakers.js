@@ -15,9 +15,9 @@ const Speakers = ({}) => {
   // CODE ONLY LEFT HERE COMMENTED OUT FOR TEACH PURPOSES.
   // BEST PRACTICE WOULD BE TO REMOVE COMMENTED CODE OUT AS IT
   //   WOULD BE IN SOURCE CONTROL AND NOT NECESSARY.
-
+  //useReducer is  built with useReducer under it
   //const [speakerList, setSpeakerList] = useState([]);
-
+  //Technically is usereducer is the same that usestate but more complex and globally
   function speakersReducer(state, action) {
     switch (action.type) {
       case "setSpeakerList": {
@@ -27,6 +27,7 @@ const Speakers = ({}) => {
         return state;
     }
   }
+  //set useReducer hook
   const [speakerList,dispatch] = useReducer(speakersReducer, []);
 
   const [isLoading, setIsLoading] = useState(true);

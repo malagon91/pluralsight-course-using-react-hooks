@@ -6,6 +6,7 @@ import { Header } from "../src/Header";
 import { Menu } from "../src/Menu";
 import SpeakerData from "./SpeakerData";
 import SpeakerDetail from "./SpeakerDetail";
+//Export config context declared in App
 import { ConfigContext } from "./App";
 
 const Speakers = ({}) => {
@@ -14,7 +15,7 @@ const Speakers = ({}) => {
 
   const [speakerList, setSpeakerList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+//you set the hook to use the context declared on app component
   const context = useContext(ConfigContext);
 
   useEffect(() => {
@@ -80,6 +81,7 @@ const Speakers = ({}) => {
       <Menu />
       <div className="container">
         <div className="btn-toolbar  margintopbottom5 checkbox-bigger">
+          {/*use context*/}
           {context.showSpeakerSpeakingDays === false ? null : (
           <div className="hide">
             <div className="form-check-inline">

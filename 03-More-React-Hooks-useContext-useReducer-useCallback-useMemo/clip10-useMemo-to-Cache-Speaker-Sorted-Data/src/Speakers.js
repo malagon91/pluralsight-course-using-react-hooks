@@ -55,7 +55,7 @@ const Speakers = ({}) => {
       sessionId
     });
   },[]);
-
+//Use memo catch data in react component and you need to set the inputs when the memo changes to you can update  the components
   const newSpeakerList = useMemo(() => speakerList
       .filter(
           ({ sat, sun }) => (speakingSaturday && sat) || (speakingSunday && sun)

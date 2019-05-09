@@ -64,7 +64,12 @@ const Speakers = ({}) => {
   const handleChangeSunday = () => {
     setSpeakingSunday(!speakingSunday);
   };
-
+//use callback is used to caching functions so in this example adding callback we just re-render only one data in array
+  //without the hook the component render all items when you just select one heart
+  /*my own words
+  in this case when you render the list you render this function each time but one value was changes so you just need render one function for the item that was
+  changed with callback we can optimizate that
+  * */
   const heartFavoriteHandler = useCallback((e, favoriteValue) => {
     e.preventDefault();
     const sessionId = parseInt(e.target.attributes["data-sessionid"].value);

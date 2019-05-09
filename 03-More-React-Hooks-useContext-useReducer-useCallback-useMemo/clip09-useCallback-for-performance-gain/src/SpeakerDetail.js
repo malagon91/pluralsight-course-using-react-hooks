@@ -1,5 +1,5 @@
 import ImageToggleOnMouseOver from "./ImageToggleOnScroll";
-
+//We need to add memo to the component to optimizate
 const SpeakerDetail = React.memo( ({
   id,
   firstName,
